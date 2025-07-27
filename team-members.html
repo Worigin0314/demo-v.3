@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>团队成员 - 龙窑青韵队</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind自定义颜色和字体 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            celadon: {
+              primary: '#0074d9',
+              secondary: '#4CAF50',
+              accent: '#FF9800',
+              dark: '#0F4C81',
+              light: '#E6F7FF'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fa fa-leaf text-celadon-primary mr-2 text-xl"></i>
+        <span class="text-xl font-bold text-celadon-dark">龙窑青韵队</span>
+      </div>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html#team" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          团队介绍
+        </a>
+        <a href="index.html#process" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          烧制过程
+        </a>
+        <a href="index.html#contact" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          联系我们
+        </a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-celadon-primary">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+        <a href="index.html#team" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">团队介绍</a>
+        <a href="index.html#process" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">烧制过程</a>
+        <a href="index.html#contact" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">联系我们</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面标题区域 -->
+  <section class="pt-24 pb-12 bg-celadon-light">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div>
+          <h1 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-celadon-dark">团队成员</h1>
+          <p class="text-gray-600 mt-2">探索我们专业的青瓷文化传承团队</p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="index.html" class="text-gray-600 hover:text-celadon-primary transition-colors">
+            <i class="fa fa-home mr-1"></i> 首页
+          </a>
+          <span class="mx-2 text-gray-400">/</span>
+          <a href="index.html#team" class="text-gray-600 hover:text-celadon-primary transition-colors">
+            团队介绍
+          </a>
+          <span class="mx-2 text-gray-400">/</span>
+          <span class="text-celadon-primary">团队成员</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 团队成员详情 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="bg-gray-50 rounded-2xl shadow-md overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-3">
+          <div class="lg:col-span-1 bg-celadon-dark p-8 text-white">
+            <h2 class="text-2xl font-bold mb-6">核心成员</h2>
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <img src="./团队成员照片/队长.jpg" alt="张明" class="w-20 h-20 rounded-full object-cover mr-4">
+                <div>
+                  <h3 class="font-semibold text-lg">陈韦呈</h3>
+                  <p class="text-gray-300">队长</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <img src="./团队成员照片/副队.jpg" alt="李华" class="w-20 h-20 rounded-full object-cover mr-4">
+                <div>
+                  <h3 class="font-semibold text-lg">刘奕廷</h3>
+                  <p class="text-gray-300">副队长</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <img src="./团队成员照片/运营.jpg" alt="王芳" class="w-20 h-20 rounded-full object-cover mr-4">
+                <div>
+                  <h3 class="font-semibold text-lg">赵祎泽</h3>
+                  <p class="text-gray-300">媒体运营</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <img src="./团队成员照片/摄影.jpg" alt="赵强" class="w-20 h-20 rounded-full object-cover mr-4">
+                <div>
+                  <h3 class="font-semibold text-lg">梁艺倬、王笑彤</h3>
+                  <p class="text-gray-300">摄影师 / 视频制作</p>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <img src="./团队成员照片/文稿组.jpg" alt="赵强" class="w-20 h-20 rounded-full object-cover mr-4">
+                <div>
+                  <h3 class="font-semibold text-lg">张曼秋、包熙衍</h3>
+                  <p class="text-gray-300">文稿撰写</p>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <img src="./团队成员照片/美工.jpg" alt="赵强" class="w-20 h-20 rounded-full object-cover mr-4">
+                <div>
+                  <h3 class="font-semibold text-lg">张露、牛一涵</h3>
+                  <p class="text-gray-300">美工设计</p>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <img src="https://picsum.photos/id/1074/100/100" alt="赵强" class="w-20 h-20 rounded-full object-cover mr-4">
+                <div>
+                  <h3 class="font-semibold text-lg">王起源</h3>
+                  <p class="text-gray-300">网络技术开发</p>
+                </div>
+              </div>
+
+            </div>
+            
+            <div class="mt-10">
+              <h3 class="font-semibold text-lg mb-4">团队规模</h3>
+              <div class="bg-white/10 p-4 rounded-lg">
+                <div class="flex justify-between items-center mb-2">
+                  <span>核心成员</span>
+                  <span>10人</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2.5">
+                  <div class="bg-celadon-primary h-2.5 rounded-full" style="width: 40%"></div>
+                </div>
+                
+                
+                <div class="flex justify-between items-center mt-4 mb-2">
+                  <span>顾问专家</span>
+                  <span>5人</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2.5">
+                  <div class="bg-celadon-primary h-2.5 rounded-full" style="width: 25%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="lg:col-span-2 p-8">
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-celadon-dark mb-4">团队简介</h2>
+              <p class="text-gray-600 leading-relaxed">
+                龙窑青韵队成立于2025年，是一支由青瓷艺术家、文化研究专家、设计师和新媒体专业人士组成的多元化团队。我们致力于传承和弘扬龙泉青瓷文化，通过创新的方式展示传统工艺的当代表达。
+              </p>
+              <p class="text-gray-600 leading-relaxed mt-4">
+                团队核心成员均具有多年的青瓷文化研究和实践经验，曾参与多个国家级和省级文化遗产保护项目。我们不仅关注传统工艺的传承，更注重将青瓷文化与现代生活相结合，创造出既具有文化内涵又符合当代审美的青瓷作品和文化产品。
+              </p>
+            </div>
+            
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-celadon-dark mb-4">团队使命</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                  <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <i class="fa fa-book text-celadon-primary"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-celadon-dark mb-2">文化传承</h3>
+                  <p class="text-gray-600">
+                    深入挖掘和研究青瓷文化的历史渊源和技艺精髓，记录和保存传统工艺，确保青瓷文化的传承和延续。
+                  </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                  <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <i class="fa fa-lightbulb-o text-celadon-primary"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-celadon-dark mb-2">创新发展</h3>
+                  <p class="text-gray-600">
+                    将传统青瓷工艺与现代设计理念相结合，开发具有创新性和实用性的青瓷产品，推动青瓷文化的现代转型。
+                  </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                  <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <i class="fa fa-bullhorn text-celadon-primary"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-celadon-dark mb-2">文化传播</h3>
+                  <p class="text-gray-600">
+                    通过多种渠道和形式，向国内外广泛传播青瓷文化，提高公众对青瓷文化的认知和理解，增强文化自信。
+                  </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                  <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <i class="fa fa-users text-celadon-primary"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-celadon-dark mb-2">交流合作</h3>
+                  <p class="text-gray-600">
+                    与国内外相关机构和个人开展交流合作，分享青瓷文化的魅力，促进不同文化之间的对话和理解。
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h2 class="text-2xl font-bold text-celadon-dark mb-4">团队成就</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                  <div class="text-4xl font-bold text-celadon-primary mb-2">12</div>
+                  <p class="text-gray-600">国家级遗产项目</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                  <div class="text-4xl font-bold text-celadon-primary mb-2">28</div>
+                  <p class="text-gray-600">青瓷文化展览</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                  <div class="text-4xl font-bold text-celadon-primary mb-2">50+</div>
+                  <p class="text-gray-600">媒体报道</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关链接 -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-xl font-semibold text-celadon-dark mb-6">相关内容</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="team-features.html" class="bg-white rounded-xl shadow-md overflow-hidden hover-scale flex">
+          <div class="w-1/3">
+            <img src="https://picsum.photos/id/119/300/300" alt="团队特色" class="w-full h-full object-cover">
+          </div>
+          <div class="w-2/3 p-6">
+            <h3 class="text-lg font-semibold text-celadon-dark mb-2">团队特色</h3>
+            <p class="text-gray-600">了解我们融合传统与现代的独特团队特色</p>
+            <div class="mt-4 text-celadon-primary flex items-center">
+              查看详情 <i class="fa fa-arrow-right ml-2"></i>
+            </div>
+          </div>
+        </a>
+        
+        <a href="team-activities.html" class="bg-white rounded-xl shadow-md overflow-hidden hover-scale flex">
+          <div class="w-1/3">
+            <img src="https://picsum.photos/id/1059/300/300" alt="社会实践" class="w-full h-full object-cover">
+          </div>
+          <div class="w-2/3 p-6">
+            <h3 class="text-lg font-semibold text-celadon-dark mb-2">社会实践</h3>
+            <p class="text-gray-600">探索我们推动青瓷文化传承的社会实践活动</p>
+            <div class="mt-4 text-celadon-primary flex items-center">
+              查看详情 <i class="fa fa-arrow-right ml-2"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-celadon-dark text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4">龙窑青韵队</h3>
+          <p class="text-gray-300 mb-4">
+            致力于传承和弘扬青瓷文化，探索传统工艺的当代表达
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://weibo.com/u/6877043278" class="text-gray-300 hover:text-white transition-colors">
+              <i class="fa fa-weibo"></i>
+            </a>
+            <a href="https://mp.weixin.qq.com/s/Svc4TknmBlT9J4_2A8J44w" class="text-gray-300 hover:text-white transition-colors">
+              <i class="fa fa-weixin"></i>
+            </a>
+            <a href="https://www.xiaohongshu.com/user/profile/66921859000000000f0361cb?xsec_token=ABGn3pgbkM5eNL8i0MQxDYkdvZK5-S8IlnPYrvHSk5X2g%3D&xsec_source=pc_search" class="text-gray-300 hover:text-white transition-colors">
+              <i class="fa fa-book"></i> <!-- 小红书图标 -->
+            </a>
+            <a href="https://space.bilibili.com/3546913378929323?spm_id_from=333.337.search-card.all.click" class="text-gray-300 hover:text-white transition-colors">
+              <i class="fa fa-play-circle"></i> <!-- B站图标 -->
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html#team" class="text-gray-300 hover:text-white transition-colors">团队介绍</a></li>
+            <li><a href="index.html#process" class="text-gray-300 hover:text-white transition-colors">烧制过程</a></li>
+            <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">联系我们</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">联系方式</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i class="fa fa-envelope mr-2 text-gray-300"></i>
+              <span class="text-gray-300">chenweicheng101@163.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-weixin mr-2 text-gray-300"></i>
+              <span class="text-gray-300">龙窑青韵队</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-map-marker mr-2 text-gray-300"></i>
+              <span class="text-gray-300">浙江省龙泉市</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">订阅更新</h3>
+          <p class="text-gray-300 mb-4">
+            订阅我们的通讯，获取最新的青瓷文化资讯和团队动态
+          </p>
+          <form class="flex">
+            <input type="email" placeholder="您的邮箱地址" class="px-4 py-2 rounded-l-md focus:outline-none text-gray-800 w-full">
+            <button type="submit" class="bg-celadon-primary hover:bg-celadon-primary/80 text-white px-4 py-2 rounded-r-md transition-colors">
+              <i class="fa fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+        <p>© 2025 龙窑青韵队. 保留所有权利。</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 返回顶部按钮 -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 bg-celadon-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-celadon-dark">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script>
+    // 导航栏滚动效果
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('py-2', 'shadow-md');
+        navbar.classList.remove('py-3', 'shadow-sm');
+        backToTop.classList.remove('opacity-0', 'invisible');
+        backToTop.classList.add('opacity-100', 'visible');
+      } else {
+        navbar.classList.add('py-3', 'shadow-sm');
+        navbar.classList.remove('py-2', 'shadow-md');
+        backToTop.classList.add('opacity-0', 'invisible');
+        backToTop.classList.remove('opacity-100', 'visible');
+      }
+    });
+    
+    // 移动端菜单切换
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // 返回顶部
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
+    

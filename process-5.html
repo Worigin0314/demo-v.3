@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>装窑 - 青瓷烧制过程</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind自定义颜色和字体 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            celadon: {
+              primary: '#0074d9',
+              secondary: '#4CAF50',
+              accent: '#FF9800',
+              dark: '#0F4C81',
+              light: '#E6F7FF'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.03);
+      }
+      .bg-gradient-celadon {
+        background: linear-gradient(135deg, #0074d9 0%, #0F4C81 100%);
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fa fa-leaf text-celadon-primary mr-2 text-xl"></i>
+        <span class="text-xl font-bold text-celadon-dark">龙窑青韵队</span>
+      </div>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html#team" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          团队介绍
+        </a>
+        <a href="index.html#process" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          烧制过程
+        </a>
+        <a href="index.html#contact" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          联系我们
+        </a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-celadon-primary">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+        <a href="index.html#team" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">团队介绍</a>
+        <a href="index.html#process" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">烧制过程</a>
+        <a href="index.html#contact" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">联系我们</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面标题区域 -->
+  <section class="pt-28 pb-16 bg-celadon-light/30">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-[clamp(2rem,4vw,3rem)] font-bold text-celadon-dark mb-4">青瓷烧制过程 - 装窑</h1>
+      <div class="w-20 h-1 bg-celadon-primary mx-auto mb-6"></div>
+      <p class="text-gray-600 max-w-3xl mx-auto">将施釉后的坯体小心装入龙窑，合理安排摆放位置和间距，确保烧制过程中受热均匀</p>
+    </div>
+  </section>
+
+  <!-- 主要内容区域 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- 工艺步骤导航 -->
+      <div class="mb-16">
+        <div class="flex overflow-x-auto pb-4 space-x-2 md:justify-center">
+          <a href="process-1.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">1. 原料准备</a>
+          <a href="process-2.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">2. 成型制作</a>
+          <a href="process-3.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">3. 素烧</a>
+          <a href="process-4.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">4. 施釉</a>
+          <a href="process-5.html" class="px-6 py-3 bg-celadon-primary text-white rounded-full whitespace-nowrap">5. 装窑</a>
+          <a href="process-6.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">6. 烧成</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+          <img src="./process-5/装.jpg" alt="青瓷装窑过程" class="w-full h-auto rounded-xl shadow-lg">
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-celadon-dark mb-6">装窑工艺概述</h2>
+          <p class="text-gray-600 mb-6">
+            装窑是青瓷烧制前的最后一道准备工序，它是将施釉后的坯体按照一定的规则和方法装入窑炉的过程。装窑工艺直接影响窑内气流分布、温度均匀性和最终产品质量，是一项技术性很强的工作。
+          </p>
+          <p class="text-gray-600 mb-6">
+            龙泉青瓷传统上使用龙窑烧制，龙窑依山而建，呈长条形，具有良好的通风和升温性能。装窑时需要根据不同器物的大小、形状和对温度的要求，合理安排在窑内的不同位置，以充分利用窑内空间并保证烧制效果。
+          </p>
+          <div class="bg-celadon-light/30 p-4 rounded-lg border-l-4 border-celadon-primary">
+            <p class="italic text-gray-700">
+              "三分烧，七分装"，这句行话充分说明了装窑在青瓷烧制中的重要性。一个经验丰富的装窑师傅能够根据窑炉特点和器物需求，制定最佳的装窑方案，提高成品率和产品质量。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-8 rounded-xl mb-16">
+        <h2 class="text-2xl font-bold text-celadon-dark mb-6 text-center">装窑注意事项</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-sitemap text-xl text-celadon-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">窑位选择</h3>
+            <p class="text-gray-600">
+              根据器物对温度的要求选择合适的窑位，一般来说，龙窑前部温度较低，中部温度最高且稳定，后部温度次之但气氛较好。大型器物和厚胎器物宜放在温度较高的中部，小型器物和薄胎器物可放在温度较低的部位。
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-arrows-h text-xl text-celadon-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">间距控制</h3>
+            <p class="text-gray-600">
+              坯体之间需保持适当的间距，以保证窑内气流顺畅，温度均匀。间距过小会导致通风不良，温度不均；间距过大则浪费窑内空间，增加能耗。一般来说，坯体之间的间距应不小于坯体高度的1/3。
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-stack-overflow text-xl text-celadon-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">叠放方式</h3>
+            <p class="text-gray-600">
+              对于可叠放的器物，可采用套装或叠放的方式提高空间利用率，但需注意稳定性和承重能力。一般采用"匣钵"装烧，即将器物放入匣钵中，再将匣钵叠放，以防止落灰污染釉面和器物粘连。
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-balance-scale text-xl text-celadon-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">重量平衡</h3>
+            <p class="text-gray-600">
+              装窑时需注意窑炉的重量平衡，避免因重量分布不均导致窑体变形或倒塌。较重的器物应放在窑炉底部，较轻的器物放在上部；窑炉两侧和中间的重量也应大致均衡，以保证窑体受力均匀。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 工艺步骤导航 -->
+      <div class="flex justify-between mt-20">
+        <a href="process-4.html" class="inline-flex items-center px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium rounded-md shadow-md transition-colors">
+          <i class="fa fa-arrow-left mr-2"></i> 上一步：施釉
+        </a>
+        <a href="process-6.html" class="inline-flex items-center px-6 py-3 bg-celadon-primary hover:bg-celadon-dark text-white font-medium rounded-md shadow-md transition-colors">
+          下一步：烧成 <i class="fa fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚和JavaScript部分与其他文件相同 -->
+</body>
+</html>

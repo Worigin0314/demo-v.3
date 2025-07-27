@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>成型制作 - 青瓷烧制过程</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind自定义颜色和字体 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            celadon: {
+              primary: '#0074d9',
+              secondary: '#4CAF50',
+              accent: '#FF9800',
+              dark: '#0F4C81',
+              light: '#E6F7FF'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.03);
+      }
+      .bg-gradient-celadon {
+        background: linear-gradient(135deg, #0074d9 0%, #0F4C81 100%);
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fa fa-leaf text-celadon-primary mr-2 text-xl"></i>
+        <span class="text-xl font-bold text-celadon-dark">龙窑青韵队</span>
+      </div>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html#team" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          团队介绍
+        </a>
+        <a href="index.html#process" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          烧制过程
+        </a>
+        <a href="index.html#contact" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          联系我们
+        </a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-celadon-primary">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+        <a href="index.html#team" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">团队介绍</a>
+        <a href="index.html#process" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">烧制过程</a>
+        <a href="index.html#contact" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">联系我们</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面标题区域 -->
+  <section class="pt-28 pb-16 bg-celadon-light/30">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-[clamp(2rem,4vw,3rem)] font-bold text-celadon-dark mb-4">青瓷烧制过程 - 成型制作</h1>
+      <div class="w-20 h-1 bg-celadon-primary mx-auto mb-6"></div>
+      <p class="text-gray-600 max-w-3xl mx-auto">使用拉坯、注浆、雕塑等多种技法塑造器形，匠人凭借丰富经验和精湛技艺，赋予作品独特的形态和神韵</p>
+    </div>
+  </section>
+
+  <!-- 主要内容区域 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- 工艺步骤导航 -->
+      <div class="mb-16">
+        <div class="flex overflow-x-auto pb-4 space-x-2 md:justify-center">
+          <a href="process-1.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">1. 原料准备</a>
+          <a href="process-2.html" class="px-6 py-3 bg-celadon-primary text-white rounded-full whitespace-nowrap">2. 成型制作</a>
+          <a href="process-3.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">3. 素烧</a>
+          <a href="process-4.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">4. 施釉</a>
+          <a href="process-5.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">5. 装窑</a>
+          <a href="process-6.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">6. 烧成</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+          <img src="./process-2/总.jpg" alt="青瓷成型制作" class="w-full h-auto rounded-xl shadow-lg">
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-celadon-dark mb-6">成型工艺概述</h2>
+          <p class="text-gray-600 mb-6">
+            成型是青瓷制作的关键环节，是将练好的瓷泥转化为具有一定形状和结构的坯体的过程。龙泉青瓷的成型工艺主要包括拉坯、利坯、印坯、注浆、雕塑等多种技法，每种技法都有其独特的特点和适用范围。
+          </p>
+          <p class="text-gray-600 mb-6">
+            传统成型工艺高度依赖匠人的经验和手感，一件优秀的青瓷作品往往需要数年甚至数十年的技艺积累。现代青瓷制作在保留传统技艺精髓的基础上，也引入了部分机械化辅助设备，提高了生产效率和精度。
+          </p>
+          <div class="bg-celadon-light/30 p-4 rounded-lg border-l-4 border-celadon-primary">
+            <p class="italic text-gray-700">
+              "轮盘一转，巧手翻飞，泥土在匠人手中仿佛有了生命，逐渐展现出优美的形态。"这是对青瓷拉坯工艺最生动的描述。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-8 rounded-xl mb-16">
+        <h2 class="text-2xl font-bold text-celadon-dark mb-6 text-center">主要成型技法</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- 拉坯成型 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-repeat text-xl text-celadon-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">拉坯成型</h3>
+            <img src="process-2/成型制作-1.jpg" alt="拉坯成型" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <p class="text-gray-600">
+              在旋转的轮盘上，匠人用手将瓷泥拉制成各种圆形器物，如碗、盘、瓶等，是最具代表性的传统成型技法。
+            </p>
+          </div>
+
+          <!-- 利坯修整 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-scissors text-xl text-celadon-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">利坯修整</h3>
+            <img src="process-2/利.jpg" alt="利坯修整" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <p class="text-gray-600">
+              对拉制后的坯体进行精细修整，调整厚度，修整外形，是保证器物规整度和美观度的关键工序。
+            </p>
+          </div>
+
+          <!-- 印坯成型 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-cube text-xl text-celadon-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">印坯成型</h3>
+            <img src="process-2/印.jpg" alt="印坯成型" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <p class="text-gray-600">
+              将瓷泥压入模具中成型，适用于制作形状复杂或需要批量生产的器物，能保证造型的一致性。
+            </p>
+          </div>
+
+          <!-- 注浆成型 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-flask text-xl text-celadon-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">注浆成型</h3>
+            <img src="process-2/注浆.jpg" alt="注浆成型" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <p class="text-gray-600">
+              将泥浆注入石膏模具，利用石膏的吸水性使泥浆在模具内壁形成坯体，适用于复杂形状器物。
+            </p>
+          </div>
+
+          <!-- 雕塑成型 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-paint-brush text-xl text-celadon-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">雕塑成型</h3>
+            <img src="process-2/雕塑.png" alt="雕塑成型" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <p class="text-gray-600">
+              手工雕塑各种人物、动物等立体造型，是最具艺术性和创造性的成型技法，对匠人要求极高。
+            </p>
+          </div>
+
+          <!-- 粘接成型 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-puzzle-piece text-xl text-celadon-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">粘接成型</h3>
+            <img src="process-2/粘.jpg" alt="粘接成型" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <p class="text-gray-600">
+              将多个简单坯体部件粘接组合成复杂器物，如瓶耳、壶嘴等部件的安装多采用此方法。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <h3 class="text-xl font-semibold text-celadon-dark mb-4 flex items-center">
+            <i class="fa fa-lightbulb-o text-celadon-primary mr-3"></i>工艺要点
+          </h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <i class="fa fa-check text-celadon-primary mt-1 mr-3"></i>
+              <span>坯体厚度控制：均匀的厚度是保证烧制过程中受热均匀的关键</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check text-celadon-primary mt-1 mr-3"></i>
+              <span>含水率控制：成型时含水率一般在20%-25%，过高易变形，过低可塑性差</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check text-celadon-primary mt-1 mr-3"></i>
+              <span>干燥控制：成型后的坯体需自然阴干，避免阳光直射和风吹，防止开裂</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check text-celadon-primary mt-1 mr-3"></i>
+              <span>修坯精度：表面平整度和尺寸精度直接影响最终产品质量和美观度</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <h3 class="text-xl font-semibold text-celadon-dark mb-4 flex items-center">
+            <i class="fa fa-history text-celadon-primary mr-3"></i>历史传承
+          </h3>
+          <p class="text-gray-600 mb-4">
+            龙泉青瓷的成型工艺历史悠久，早在宋代就已形成了完整的体系。宋代龙泉窑的匠人们创造了许多精美绝伦的器型，如梅瓶、玉壶春瓶、琮式瓶等经典造型，至今仍被广泛沿用。
+          </p>
+          <p class="text-gray-600">
+            传统拉坯使用的是木制脚踏轮盘，匠人通过脚蹬带动轮盘旋转，双手同时进行拉坯操作，需要高度的协调能力。现代则多采用电动轮盘，大大降低了体力消耗，提高了转速稳定性。
+          </p>
+        </div>
+      </div>
+
+      <!-- 工艺步骤导航 -->
+      <div class="flex justify-between mt-20">
+        <a href="process-1.html" class="inline-flex items-center px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium rounded-md shadow-md transition-colors">
+          <i class="fa fa-arrow-left mr-2"></i> 上一步：原料准备
+        </a>
+        <a href="process-3.html" class="inline-flex items-center px-6 py-3 bg-celadon-primary hover:bg-celadon-dark text-white font-medium rounded-md shadow-md transition-colors">
+          下一步：素烧 <i class="fa fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- 页脚和JavaScript部分与其他文件相同，此处省略 -->
+</body>
+</html>

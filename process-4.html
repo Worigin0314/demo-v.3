@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>施釉 - 青瓷烧制过程</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+ <!-- Font Awesome 6 替代旧版 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- 配置Tailwind自定义颜色和字体 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            celadon: {
+              primary: '#0074d9',
+              secondary: '#4CAF50',
+              accent: '#FF9800',
+              dark: '#0F4C81',
+              light: '#E6F7FF'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.03);
+      }
+      .bg-gradient-celadon {
+        background: linear-gradient(135deg, #0074d9 0%, #0F4C81 100%);
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fa fa-leaf text-celadon-primary mr-2 text-xl"></i>
+        <span class="text-xl font-bold text-celadon-dark">龙窑青韵队</span>
+      </div>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html#team" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          团队介绍
+        </a>
+        <a href="index.html#process" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          烧制过程
+        </a>
+        <a href="index.html#contact" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          联系我们
+        </a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-celadon-primary">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+        <a href="index.html#team" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">团队介绍</a>
+        <a href="index.html#process" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">烧制过程</a>
+        <a href="index.html#contact" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">联系我们</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面标题区域 -->
+  <section class="pt-28 pb-16 bg-celadon-light/30">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-[clamp(2rem,4vw,3rem)] font-bold text-celadon-dark mb-4">青瓷烧制过程 - 施釉</h1>
+      <div class="w-20 h-1 bg-celadon-primary mx-auto mb-6"></div>
+      <p class="text-gray-600 max-w-3xl mx-auto">在素烧后的坯体表面施以特制釉料，釉料的成分和施釉方法直接影响青瓷的色泽和质感</p>
+    </div>
+  </section>
+
+  <!-- 主要内容区域 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- 工艺步骤导航 -->
+      <div class="mb-16">
+        <div class="flex overflow-x-auto pb-4 space-x-2 md:justify-center">
+          <a href="process-1.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">1. 原料准备</a>
+          <a href="process-2.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">2. 成型制作</a>
+          <a href="process-3.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">3. 素烧</a>
+          <a href="process-4.html" class="px-6 py-3 bg-celadon-primary text-white rounded-full whitespace-nowrap">4. 施釉</a>
+          <a href="process-5.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">5. 装窑</a>
+          <a href="process-6.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">6. 烧成</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+          <img src="./process-4/总.jpg" alt="青瓷施釉过程" class="w-full h-auto rounded-xl shadow-lg">
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-celadon-dark mb-6">施釉工艺概述</h2>
+          <p class="text-gray-600 mb-6">
+            施釉是青瓷制作的关键工序之一，它决定了青瓷最终的色泽、质感和艺术效果。龙泉青瓷以其独特的青釉著称，这种美丽的青色源于釉料中的铁元素在还原气氛中的化学反应。
+          </p>
+          <p class="text-gray-600 mb-6">
+            龙泉青瓷的釉料主要由瓷石、石英、长石等原料组成，并含有一定量的氧化铁。根据釉色的不同，釉料配方也有所差异，如粉青釉、梅子青釉、豆青釉等各具特色，都是通过调整釉料成分和烧制工艺实现的。
+          </p>
+          <div class="bg-celadon-light/30 p-4 rounded-lg border-l-4 border-celadon-primary">
+            <p class="italic text-gray-700">
+              "釉是青瓷的衣裳，一件精美的青瓷作品，离不开一层均匀、细腻、光泽的釉面。施釉技艺的高低，直接关系到作品的成败。"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-8 rounded-xl mb-16">
+        <h2 class="text-2xl font-bold text-celadon-dark mb-6 text-center">主要施釉方法</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+             <i class="fa-solid fa-water text-xl text-celadon-primary"></i>
+            </div>
+            <img src="process-4/浸.jpg" alt="浸釉法施釉过程" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">浸釉法</h3>
+            <p class="text-gray-600">
+              将坯体浸入釉浆中，利用坯体的吸水性使釉料附着在表面，适用于小型器物和圆形器物。
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+             <i class="fa-solid fa-paint-brush text-xl text-celadon-primary"></i>
+            </div>
+            <img src="process-4/刷.jpg" alt="刷釉法施釉过程" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">刷釉法</h3>
+            <p class="text-gray-600">
+              用毛刷将釉料均匀涂刷在坯体表面，适用于大型器物、异形器物和局部施釉，操作灵活但要求较高。
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa-solid fa-faucet text-xl text-celadon-primary"></i>
+            </div>
+            <img src="process-4/浇.jpg" alt="浇釉法施釉过程" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">浇釉法</h3>
+            <p class="text-gray-600">
+              将釉浆均匀浇淋在坯体表面，适用于大型平面器物，能保证釉面均匀，但需要控制好浇釉速度和角度。
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+             <i class="fa-solid fa-spray-can text-xl text-celadon-primary"></i>
+            </div>
+            <img src="process-4/喷.jpg" alt="喷釉法施釉过程" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">喷釉法</h3>
+            <p class="text-gray-600">
+              利用压缩空气将釉料雾化后喷在坯体表面，适用于复杂形状器物和需要渐变效果的釉面，现代工艺常用。
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa-solid fa-arrows-left-right text-xl text-celadon-primary"></i>
+            </div>
+            <img src="process-4/荡.jpg" alt="荡釉法施釉过程" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">荡釉法</h3>
+            <p class="text-gray-600">
+              将釉浆倒入器物内部，轻轻晃动使釉料均匀附着在内壁，主要用于中空器物的内部施釉。
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa-solid fa-layer-group text-xl text-celadon-primary"></i>
+            </div>
+            <img src="process-4/多层.png" alt="多层施釉过程" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">多层施釉</h3>
+            <p class="text-gray-600">
+              多次施釉以达到所需的釉层厚度和特殊效果，龙泉青瓷的厚釉效果多采用这种方法，需多次施釉多次烧制。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <h3 class="text-xl font-semibold text-celadon-dark mb-4 flex items-center">
+            <i class="fa fa-lightbulb-o text-celadon-primary mr-3"></i>工艺要点
+          </h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <i class="fa fa-check text-celadon-primary mt-1 mr-3"></i>
+              <span>釉浆浓度：釉浆浓度直接影响釉层厚度，浓度过高易产生流釉、缩釉，过低则釉层薄且不均匀</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check text-celadon-primary mt-1 mr-3"></i>
+              <span>施釉均匀性：确保釉层厚度均匀一致，避免厚薄不均导致烧制后釉色差异</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check text-celadon-primary mt-1 mr-3"></i>
+              <span>釉层厚度：龙泉青瓷通常需要较厚的釉层（1-2mm），以达到温润如玉的效果</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check text-celadon-primary mt-1 mr-3"></i>
+              <span>干燥控制：施釉后的坯体需充分干燥，避免釉层开裂和烧制时产生气泡</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <h3 class="text-xl font-semibold text-celadon-dark mb-4 flex items-center">
+            <i class="fa fa-flask text-celadon-primary mr-3"></i>釉料配方
+          </h3>
+          <p class="text-gray-600 mb-4">
+            龙泉青瓷的釉料配方是历代艺人的智慧结晶，不同的釉色需要不同的配方。传统釉料主要由以下原料组成：
+          </p>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-start">
+              <i class="fa fa-angle-right text-celadon-primary mt-1 mr-3"></i>
+              <span><strong>瓷石</strong>：提供釉料的主要成分，决定釉的基础性质</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-angle-right text-celadon-primary mt-1 mr-3"></i>
+              <span><strong>石英</strong>：提高釉的熔融温度和耐磨性</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-angle-right text-celadon-primary mt-1 mr-3"></i>
+              <span><strong>长石</strong>：助熔剂，降低釉的熔融温度</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-angle-right text-celadon-primary mt-1 mr-3"></i>
+              <span><strong>氧化铁</strong>：着色剂，决定青瓷的基本色调</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 工艺步骤导航 -->
+      <div class="flex justify-between mt-20">
+        <a href="process-3.html" class="inline-flex items-center px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium rounded-md shadow-md transition-colors">
+          <i class="fa fa-arrow-left mr-2"></i> 上一步：素烧
+        </a>
+        <a href="process-5.html" class="inline-flex items-center px-6 py-3 bg-celadon-primary hover:bg-celadon-dark text-white font-medium rounded-md shadow-md transition-colors">
+          下一步：装窑 <i class="fa fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚和JavaScript部分与其他文件相同 -->
+</body>
+</html>

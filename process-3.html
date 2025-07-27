@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>素烧 - 青瓷烧制过程</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind自定义颜色和字体 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            celadon: {
+              primary: '#0074d9',
+              secondary: '#4CAF50',
+              accent: '#FF9800',
+              dark: '#0F4C81',
+              light: '#E6F7FF'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.03);
+      }
+      .bg-gradient-celadon {
+        background: linear-gradient(135deg, #0074d9 0%, #0F4C81 100%);
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fa fa-leaf text-celadon-primary mr-2 text-xl"></i>
+        <span class="text-xl font-bold text-celadon-dark">龙窑青韵队</span>
+      </div>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html#team" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          团队介绍
+        </a>
+        <a href="index.html#process" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          烧制过程
+        </a>
+        <a href="index.html#contact" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          联系我们
+        </a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-celadon-primary">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+        <a href="index.html#team" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">团队介绍</a>
+        <a href="index.html#process" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">烧制过程</a>
+        <a href="index.html#contact" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">联系我们</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面标题区域 -->
+  <section class="pt-28 pb-16 bg-celadon-light/30">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-[clamp(2rem,4vw,3rem)] font-bold text-celadon-dark mb-4">青瓷烧制过程 - 素烧</h1>
+      <div class="w-20 h-1 bg-celadon-primary mx-auto mb-6"></div>
+      <p class="text-gray-600 max-w-3xl mx-auto">将成型的坯体进行低温烧制，使其具备一定强度，便于后续施釉等工序操作，同时排除坯体内的水分</p>
+    </div>
+  </section>
+
+  <!-- 主要内容区域 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- 工艺步骤导航 -->
+      <div class="mb-16">
+        <div class="flex overflow-x-auto pb-4 space-x-2 md:justify-center">
+          <a href="process-1.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">1. 原料准备</a>
+          <a href="process-2.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">2. 成型制作</a>
+          <a href="process-3.html" class="px-6 py-3 bg-celadon-primary text-white rounded-full whitespace-nowrap">3. 素烧</a>
+          <a href="process-4.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">4. 施釉</a>
+          <a href="process-5.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">5. 装窑</a>
+          <a href="process-6.html" class="px-6 py-3 bg-gray-200 text-gray-600 hover:bg-celadon-light transition-colors rounded-full whitespace-nowrap">6. 烧成</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+          <img src="./process-3/总.jpg" alt="青瓷素烧过程" class="w-full h-auto rounded-xl shadow-lg">
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-celadon-dark mb-6">素烧工艺概述</h2>
+          <p class="text-gray-600 mb-6">
+            素烧是指将成型后的生坯在较低温度下进行预烧的过程，目的是提高坯体的机械强度，使其能够经受住后续施釉、装窑等工序的操作压力，同时排除坯体内的水分和有机杂质。
+          </p>
+          <p class="text-gray-600 mb-6">
+            龙泉青瓷的素烧温度一般控制在800-900℃之间，这个温度既能使坯体达到足够强度，又不会使坯体完全烧结，为后续的釉烧留下足够的烧成空间。素烧后的坯体具有一定的吸水性，有利于釉料的附着和均匀分布。
+          </p>
+          <div class="bg-celadon-light/30 p-4 rounded-lg border-l-4 border-celadon-primary">
+            <p class="italic text-gray-700">
+              "素烧是青瓷制作中的重要环节，它像为青瓷坯体穿上了一层隐形的铠甲，使其在后续工序中不易损坏，同时为釉料的完美呈现奠定基础。"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-8 rounded-xl mb-16">
+        <h2 class="text-2xl font-bold text-celadon-dark mb-6 text-center">素烧工艺流程</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 shadow-md hover-scale" style="border-radius: 10% 25%;">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-fire text-xl text-celadon-primary"></i>
+            </div>
+            <img src="process-3/装.jpg" alt="青瓷素烧装窑过程" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">装窑</h3>
+            <p class="text-gray-600">
+              将干燥后的生坯小心装入窑炉，合理排列，确保受热均匀，避免坯体相互接触。
+            </p>
+          </div>
+
+          <div class="bg-white p-6 shadow-md hover-scale" style="border-radius: 10% / 50%;">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-line-chart text-xl text-celadon-primary"></i>
+            </div>
+            <img src="process-3/升温.jpg" alt="青瓷素烧升温控制" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">升温控制</h3>
+            <p class="text-gray-600">
+              严格控制升温速率，特别是在水分蒸发阶段（300-500℃），防止升温过快导致坯体开裂。
+            </p>
+          </div>
+
+          <div class="bg-white p-6 shadow-md hover-scale" style="border-radius: 25% 10%;">
+            <div class="w-12 h-12 bg-celadon-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-thermometer-half text-xl text-celadon-primary"></i>
+            </div>
+            <img src="process-3/保温.jpg" alt="青瓷素烧保温冷却" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+            <h3 class="text-xl font-semibold text-celadon-dark mb-3">保温冷却</h3>
+            <p class="text-gray-600">
+              在最高温度下保温一段时间，确保坯体充分烧结，然后缓慢冷却，避免热应力导致开裂。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <h3 class="text-xl font-semibold text-celadon-dark mb-4 flex items-center">
+            <i class="fa fa-lightbulb-o text-celadon-primary mr-3"></i>工艺要点
+          </h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <i class="fa fa-check text-celadon-primary mt-1 mr-3"></i>
+              <span>温度控制：素烧温度应控制在800-900℃，过高会影响坯体吸水性，过低则强度不足</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check text-celadon-primary mt-1 mr-3"></i>
+              <span>升温速率：低温阶段（室温-300℃）可快速升温，300-500℃应缓慢升温，防止水分急剧蒸发</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check text-celadon-primary mt-1 mr-3"></i>
+              <span>窑内气氛：素烧一般采用氧化气氛，确保有机物质充分燃烧排除</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check text-celadon-primary mt-1 mr-3"></i>
+              <span>冷却速度：高温阶段应缓慢冷却，避免热冲击导致坯体开裂</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <h3 class="text-xl font-semibold text-celadon-dark mb-4 flex items-center">
+            <i class="fa fa-history text-celadon-primary mr-3"></i>历史传承
+          </h3>
+          <p class="text-gray-600 mb-4">
+            素烧工艺在龙泉青瓷制作中有着悠久的历史，考古发现宋代龙泉窑就已经采用素烧技术。传统龙窑素烧需要工匠凭借经验控制窑温，通过观察火色判断窑内温度，技艺要求极高。
+          </p>
+          <p class="text-gray-600">
+            现代青瓷生产多采用电窑或气窑进行素烧，温度控制更加精确稳定，但传统龙窑素烧的产品因其独特的火石红和自然落灰效果，依然受到收藏家的青睐。
+          </p>
+        </div>
+      </div>
+
+      <!-- 工艺步骤导航 -->
+      <div class="flex justify-between mt-20">
+        <a href="process-2.html" class="inline-flex items-center px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium rounded-md shadow-md transition-colors">
+          <i class="fa fa-arrow-left mr-2"></i> 上一步：成型制作
+        </a>
+        <a href="process-4.html" class="inline-flex items-center px-6 py-3 bg-celadon-primary hover:bg-celadon-dark text-white font-medium rounded-md shadow-md transition-colors">
+          下一步：施釉 <i class="fa fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-celadon-dark text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4">龙窑青韵队</h3>
+          <p class="text-gray-300 mb-4">
+            致力于传承和弘扬青瓷文化，探索传统工艺的当代表达
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://weibo.com/u/6877043278" class="text-gray-300 hover:text-white transition-colors">
+              <i class="fa fa-weibo"></i>
+            </a>
+            <a href="https://mp.weixin.qq.com/s/Svc4TknmBlT9J4_2A8J44w" class="text-gray-300 hover:text-white transition-colors">
+              <i class="fa fa-weixin"></i>
+            </a>
+            <a href="https://www.xiaohongshu.com/user/profile/66921859000000000f0361cb?xsec_token=ABGn3pgbkM5eNL8i0MQxDYkdvZK5-S8IlnPYrvHSk5X2g%3D&xsec_source=pc_search" class="text-gray-300 hover:text-white transition-colors">
+              <i class="fa fa-book"></i> <!-- 小红书图标 -->
+            </a>
+            <a href="https://space.bilibili.com/3546913378929323?spm_id_from=333.337.search-card.all.click" class="text-gray-300 hover:text-white transition-colors">
+              <i class="fa fa-play-circle"></i> <!-- B站图标 -->
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html#team" class="text-gray-300 hover:text-white transition-colors">团队介绍</a></li>
+            <li><a href="index.html#process" class="text-gray-300 hover:text-white transition-colors">烧制过程</a></li>
+            <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">联系我们</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">联系方式</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i class="fa fa-envelope mr-2 text-gray-300"></i>
+              <span class="text-gray-300">chenweicheng101@163.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-weixin mr-2 text-gray-300"></i>
+              <span class="text-gray-300">龙窑青韵队</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-map-marker mr-2 text-gray-300"></i>
+              <span class="text-gray-300">浙江省龙泉市</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">订阅更新</h3>
+          <p class="text-gray-300 mb-4">
+            订阅我们的通讯，获取最新的青瓷文化资讯和团队动态
+          </p>
+          <form class="flex">
+            <input type="email" placeholder="您的邮箱地址" class="px-4 py-2 rounded-l-md focus:outline-none text-gray-800 w-full">
+            <button type="submit" class="bg-celadon-primary hover:bg-celadon-primary/80 text-white px-4 py-2 rounded-r-md transition-colors">
+              <i class="fa fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+        <p>© 2025 龙窑青韵队. 保留所有权利。</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 返回顶部按钮 -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 bg-celadon-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-celadon-dark">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script>
+    // 导航栏滚动效果
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('py-2', 'shadow-md');
+        navbar.classList.remove('py-3', 'shadow-sm');
+        backToTop.classList.remove('opacity-0', 'invisible');
+        backToTop.classList.add('opacity-100', 'visible');
+      } else {
+        navbar.classList.add('py-3', 'shadow-sm');
+        navbar.classList.remove('py-2', 'shadow-md');
+        backToTop.classList.add('opacity-0', 'invisible');
+        backToTop.classList.remove('opacity-100', 'visible');
+      }
+    });
+    
+    // 返回顶部
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>团队特色 - 龙窑青韵队</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind自定义颜色和字体 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            celadon: {
+              primary: '#0074d9',
+              secondary: '#4CAF50',
+              accent: '#FF9800',
+              dark: '#0F4C81',
+              light: '#E6F7FF'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fa fa-leaf text-celadon-primary mr-2 text-xl"></i>
+        <span class="text-xl font-bold text-celadon-dark">龙窑青韵队</span>
+      </div>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html#team" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          团队介绍
+        </a>
+        <a href="index.html#process" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          烧制过程
+        </a>
+        <a href="index.html#contact" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          联系我们
+        </a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-celadon-primary">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+        <a href="index.html#team" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">团队介绍</a>
+        <a href="index.html#process" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">烧制过程</a>
+        <a href="index.html#contact" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">联系我们</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面标题区域 -->
+  <section class="pt-24 pb-12 bg-celadon-light">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div>
+          <h1 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-celadon-dark">团队特色</h1>
+          <p class="text-gray-600 mt-2">探索我们独特的团队优势</p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="index.html" class="text-gray-600 hover:text-celadon-primary transition-colors">
+            <i class="fa fa-home mr-1"></i> 首页
+          </a>
+          <span class="mx-2 text-gray-400">/</span>
+          <a href="index.html#team" class="text-gray-600 hover:text-celadon-primary transition-colors">
+            团队介绍
+          </a>
+          <span class="mx-2 text-gray-400">/</span>
+          <span class="text-celadon-primary">团队特色</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 团队特色详情 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="bg-gray-50 rounded-2xl shadow-md overflow-hidden">
+        <div class="p-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-celadon-dark mb-4">传统与现代融合的创新团队</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              龙窑青韵队将千年青瓷文化与现代设计理念相结合，以创新的方式传承和弘扬传统工艺
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-celadon-dark mb-4">传统工艺传承</h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                我们的团队汇聚了多位拥有丰富经验的青瓷工艺大师，他们精通青瓷制作的传统技艺，从原料选择、成型、施釉到烧制，每一个环节都严格遵循古法，确保作品的纯正品质。
+              </p>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <i class="fa fa-check text-celadon-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">古法技艺传承</h4>
+                    <p class="text-gray-600">掌握多种传统青瓷制作技艺，确保工艺纯正</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <i class="fa fa-check text-celadon-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">非物质文化遗产保护</h4>
+                    <p class="text-gray-600">积极参与青瓷制作技艺的保护和传承工作</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <i class="fa fa-check text-celadon-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">传统工艺研究</h4>
+                    <p class="text-gray-600">深入研究古代青瓷制作工艺，挖掘历史文化价值</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rounded-xl overflow-hidden shadow-lg">
+              <img src="https://picsum.photos/id/163/600/800" alt="传统青瓷工艺展示" class="w-full h-full object-cover">
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
+            <div class="rounded-xl overflow-hidden shadow-lg order-2 md:order-1">
+              <img src="https://picsum.photos/id/119/600/800" alt="现代设计创新展示" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="order-1 md:order-2">
+              <h3 class="text-2xl font-bold text-celadon-dark mb-4">现代设计创新</h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                我们不仅注重传统工艺的传承，更致力于将青瓷文化与现代生活相结合。团队中的设计师拥有丰富的现代设计经验，能够将传统元素与现代审美完美融合，创造出既具有文化内涵又符合当代审美的青瓷作品。
+              </p>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <i class="fa fa-check text-celadon-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">现代功能设计</h4>
+                    <p class="text-gray-600">将青瓷工艺应用于现代生活用品设计，提升实用性</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <i class="fa fa-check text-celadon-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">艺术审美创新</h4>
+                    <p class="text-gray-600">融合现代美学理念，创造新颖独特的青瓷艺术作品</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <i class="fa fa-check text-celadon-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">材料技术创新</h4>
+                    <p class="text-gray-600">探索青瓷材料与现代技术的结合，开发新的表现形式</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
+            <div>
+              <h3 class="text-2xl font-bold text-celadon-dark mb-4">多元传播渠道</h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                我们利用多种渠道和形式传播青瓷文化，不仅通过传统的展览、讲座等方式，还积极利用新媒体平台，制作高质量的视频内容，开展线上直播等活动，让更多的人了解和喜爱青瓷文化。
+              </p>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <i class="fa fa-check text-celadon-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">线下展览活动</h4>
+                    <p class="text-gray-600">举办青瓷艺术展览，参与文化交流活动</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <i class="fa fa-check text-celadon-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">新媒体传播</h4>
+                    <p class="text-gray-600">通过社交媒体、视频平台等传播青瓷文化</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <i class="fa fa-check text-celadon-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">教育普及</h4>
+                    <p class="text-gray-600">开展青瓷文化讲座、工作坊等教育活动</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rounded-xl overflow-hidden shadow-lg">
+              <img src="https://picsum.photos/id/1059/600/800" alt="文化传播活动" class="w-full h-full object-cover">
+            </div>
+          </div>
+          
+          <div class="mt-16 bg-celadon-primary/5 p-8 rounded-xl">
+            <h3 class="text-2xl font-bold text-celadon-dark mb-6 text-center">创新作品展示</h3>
+            <p class="text-gray-600 text-center max-w-3xl mx-auto mb-10">
+              我们的团队将传统工艺与现代设计相结合，创作出一系列具有创新性和艺术性的青瓷作品，以下是部分代表作品：
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale">
+                <img src="https://picsum.photos/id/163/400/300" alt="青瓷茶具系列" class="w-full h-48 object-cover">
+                <div class="p-6">
+                  <h4 class="font-semibold text-lg text-celadon-dark mb-2">青瓷茶具系列</h4>
+                  <p class="text-gray-600">
+                    将传统青瓷工艺与现代茶具设计相结合，既保留了青瓷的典雅质感，又满足了现代生活的实用需求。
+                  </p>
+                </div>
+              </div>
+              
+              <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale">
+                <img src="https://picsum.photos/id/164/400/300" alt="青瓷家居装饰" class="w-full h-48 object-cover">
+                <div class="p-6">
+                  <h4 class="font-semibold text-lg text-celadon-dark mb-2">青瓷家居装饰</h4>
+                  <p class="text-gray-600">
+                    融合现代设计理念的青瓷装饰品，为现代家居环境增添独特的文化氛围。
+                  </p>
+                </div>
+              </div>
+              
+              <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale">
+                <img src="https://picsum.photos/id/165/400/300" alt="青瓷艺术雕塑" class="w-full h-48 object-cover">
+                <div class="p-6">
+                  <h4 class="font-semibold text-lg text-celadon-dark mb-2">青瓷艺术雕塑</h4>
+                  <p class="text-gray-600">
+                    探索青瓷在雕塑艺术领域的可能性，创造出具有现代审美价值的艺术作品。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关链接 -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-xl font-semibold text-celadon-dark mb-6">相关内容</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="team-members.html" class="bg-white rounded-xl shadow-md overflow-hidden hover-scale flex">
+          <div class="w-1/3">
+            <img src="https://picsum.photos/id/1005/300/300" alt="团队成员" class="w-full h-full object-cover">
+          </div>
+          <div class="w-2/3 p-6">
+            <h3 class="text-lg font-semibold text-celadon-dark mb-2">团队成员</h3>
+            <p class="text-gray-600">了解我们专业的青瓷文化传承团队</p>
+            <div class="mt-4 text-celadon-primary flex items-center">
+              查看详情 <i class="fa fa-arrow-right ml-2"></i>
+            </div>
+          </div>
+        </a>
+        
+        
+        
+        
+        
+        <a href="team-activities.html" class="bg-white rounded-xl shadow-md overflow-hidden hover-scale flex">
+          <div class="w-1/3">
+            <img src="https://picsum.photos/id/1011/300/300" alt="团队活动" class="w-full h-full object-cover">
+          </div>
+          <div class="w-2/3 p-6">
+            <h3 class="text-lg font-semibold text-celadon-dark mb-2">团队活动</h3>
+            <p class="text-gray-600">了解我们丰富多彩的团队活动与文化交流</p>
+            <div class="mt-4 text-celadon-primary flex items-center">
+              查看详情 <i class="fa fa-arrow-right ml-2"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

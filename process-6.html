@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>青瓷烧制过程 - 烧成 | 龙窑青韵队</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind自定义颜色和字体 - 与index.html保持一致 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            celadon: {
+              primary: '#0074d9',
+              secondary: '#4CAF50',
+              accent: '#FF9800',
+              dark: '#0F4C81',
+              light: '#E6F7FF'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+
+
+  <!-- 自定义工具类 - 与index.html保持一致 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.03);
+      }
+      .bg-gradient-celadon {
+        background: linear-gradient(135deg, #0074d9 0%, #0F4C81 100%);
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+  <!-- 导航栏 - 与index.html完全相同 -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fa fa-leaf text-celadon-primary mr-2 text-xl"></i>
+        <span class="text-xl font-bold text-celadon-dark">龙窑青韵队</span>
+      </div>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html#team" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          团队介绍
+        </a>
+        <a href="index.html#process" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          烧制过程
+        </a>
+        <a href="index.html#contact" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          联系我们
+        </a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-celadon-primary">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+        <a href="index.html#team" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">团队介绍</a>
+        <a href="index.html#process" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">烧制过程</a>
+        <a href="index.html#contact" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">联系我们</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面标题区域 -->
+  <section class="pt-32 pb-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h1 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-celadon-dark mb-4">青瓷烧制过程 - 烧成</h1>
+        <div class="w-20 h-1 bg-celadon-primary mx-auto"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主要内容区域 -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/2">
+            <img src="./process-6/process-6.jpg" alt="青瓷成品展示" class="w-full h-full object-cover">
+          </div>
+          <div class="md:w-1/2 p-8 flex flex-col justify-center">
+            <h2 class="text-2xl font-bold text-celadon-dark mb-4">第六步：烧成</h2>
+            <p class="text-gray-600 mb-6">
+            
+            </p>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start">
+                <i class="fa fa-check-circle text-celadon-primary mt-1 mr-3"></i>
+                <div>
+                  <h3 class="font-semibold text-celadon-dark">质量评估</h3>
+                  <p class="text-gray-600">检查釉面质量、色泽均匀度、整体造型和有无瑕疵</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fa fa-check-circle text-celadon-primary mt-1 mr-3"></i>
+                <div>
+                  <h3 class="font-semibold text-celadon-dark">艺术鉴赏</h3>
+                  <p class="text-gray-600">评估作品的艺术价值、文化内涵和创意表达</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fa fa-check-circle text-celadon-primary mt-1 mr-3"></i>
+                <div>
+                  <h3 class="font-semibold text-celadon-dark">展示准备</h3>
+                  <p class="text-gray-600">为作品进行专业摄影、撰写介绍文案、准备展示材料</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 新增：烧成工艺技术细节 -->
+            <div class="bg-celadon-light/30 p-6 rounded-lg mt-8">
+              <h3 class="text-xl font-bold text-celadon-dark mb-4 flex items-center">
+                <i class="fa fa-fire mr-2 text-celadon-primary"></i>烧成工艺要点
+              </h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fa fa-angle-right text-celadon-primary mt-1 mr-2"></i>
+                  <span><strong>温度控制：</strong>传统龙窑需逐步升温至1260-1300℃，现代电窑可精确控制升温曲线，保温时间根据器型大小从4-8小时不等。</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-angle-right text-celadon-primary mt-1 mr-2"></i>
+                  <span><strong>气氛调节：</strong>通过控制窑内氧气含量形成氧化或还原气氛，还原气氛下铁元素还原为二价铁，呈现独特的青绿色泽。</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-angle-right text-celadon-primary mt-1 mr-2"></i>
+                  <span><strong>窑型差异：</strong>龙窑升温快、降温也快，适合批量生产；阶级窑温度均匀，利于控制品质；现代气窑则兼具环保与精准控制优势。</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-angle-right text-celadon-primary mt-1 mr-2"></i>
+                  <span><strong>传统智慧：</strong>匠人通过观察窑火颜色判断温度，"火照"试片监测釉色变化，这些技艺需十年以上经验才能熟练掌握。</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新增：成品展示板块 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl font-bold text-celadon-dark mb-4">青瓷成品展示</h2>
+        <div class="w-20 h-1 bg-celadon-primary mx-auto mb-8"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          经过精心烧制的青瓷作品，展现了传统工艺与现代审美的完美融合
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="rounded-lg overflow-hidden shadow-md hover-scale">
+          <img src="./process-6/茶具.jpg" alt="青瓷茶具" class="w-full h-48 object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-celadon-dark">青瓷茶具套装</h3>
+            <p class="text-sm text-gray-600">弟窑梅子青釉</p>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-md hover-scale">
+          <img src="./process-6/瓶.jpg" alt="青瓷花瓶" class="w-full h-48 object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-celadon-dark">青瓷花瓶</h3>
+            <p class="text-sm text-gray-600">哥窑开片纹</p>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-md hover-scale">
+          <img src="./process-6/文创.jpg" alt="青瓷摆件" class="w-full h-48 object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-celadon-dark">青瓷文创</h3>
+            <p class="text-sm text-gray-600">传统与现代结合设计</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新增：文化影响板块 -->
+  <section class="py-16 bg-celadon-light/20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-2xl font-bold text-celadon-dark mb-6 text-center">青瓷文化的当代影响</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <p class="text-gray-600 mb-4">
+              龙泉青瓷不仅是中国传统工艺的瑰宝，更是东西方文化交流的重要媒介。近年来，青瓷文化通过多种形式走向世界，成为中国文化软实力的重要代表。
+            </p>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fa fa-star text-celadon-primary mt-1 mr-3"></i>
+                <span>多次作为国礼赠送外国元首，成为文化交流的使者</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-star text-celadon-primary mt-1 mr-3"></i>
+                <span>在全球30多个国家和地区举办过专题展览</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-star text-celadon-primary mt-1 mr-3"></i>
+                <span>与现代设计品牌合作，推出融合传统元素的时尚产品</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-star text-celadon-primary mt-1 mr-3"></i>
+                <span>多所高校设立青瓷研究方向，培养年轻传承人</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <img src="https://picsum.photos/id/175/600/400" alt="青瓷文化交流" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 跳转按钮区域 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center max-w-4xl mx-auto">
+        <a href="process-5.html" class="inline-block px-8 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium rounded-md shadow transition-all mb-4 md:mb-0">
+          <i class="fa fa-arrow-left mr-2"></i> 上一步：出窑与冷却
+        </a>
+        <a href="index.html#process" class="inline-block px-8 py-3 bg-celadon-primary hover:bg-celadon-dark text-white font-medium rounded-md shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+          返回烧制过程总览 <i class="fa fa-home ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 - 与index.html风格一致 -->
+  <footer class="bg-celadon-dark text-white py-10">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-4">
+          <i class="fa fa-leaf text-celadon-primary mr-2 text-xl"></i>
+          <span class="text-xl font-bold">龙窑青韵队</span>
+        </div>
+        <p class="mb-6 text-white/80">传承千年青瓷文化，弘扬传统工艺精神</p>
+        <div class="flex justify-center space-x-6 mb-8">
+          <a href="https://weibo.com/u/6877043278" class="text-white/80 hover:text-white transition-colors"><i class="fa fa-weibo text-xl"></i></a>
+          <a href="https://mp.weixin.qq.com/s/Svc4TknmBlT9J4_2A8J44w" class="text-white/80 hover:text-white transition-colors"><i class="fa fa-wechat text-xl"></i></a>
+          <a href="https://www.xiaohongshu.com/user/profile/66921859000000000f0361cb?xsec_token=ABGn3pgbkM5eNL8i0MQxDYkdvZK5-S8IlnPYrvHSk5X2g%3D&xsec_source=pc_search" class="text-white/80 hover:text-white transition-colors"><i class="fa fa-book text-xl"></i></a> <!-- 小红书图标 -->
+          <a href="https://space.bilibili.com/3546913378929323?spm_id_from=333.337.search-card.all.click" class="text-white/80 hover:text-white transition-colors"><i class="fa fa-play-circle text-xl"></i></a> <!-- B站图标 -->
+        </div>
+        <p class="text-white/60 text-sm">© 2025 龙窑青韵队. 保留所有权利.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript - 与index.html相同的交互效果 -->
+  <script>
+    // 导航栏滚动效果
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('py-2', 'shadow');
+        navbar.classList.remove('py-3');
+      } else {
+        navbar.classList.add('py-3');
+        navbar.classList.remove('py-2', 'shadow');
+      }
+    });
+
+    // 移动端菜单切换
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
